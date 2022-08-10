@@ -1,9 +1,16 @@
-document.addEventListener('DOMContentLoaded', API);
+document.addEventListener('DOMContentLoaded', () => {
+    alert('hola')
+});
 
 async function API() {
-    const url = "db.json";
-    const response = await fetch(url);
-    const data = response.json();
+    try {
+        const url = "db.json";
+        const respuesta = await fetch(url);
+        const data = await respuesta.json();
 
-    console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
+
