@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "Hamburguesa con Queso",
+        "imagen": "./image/hamburQuesoSimple.png",
+        "precio": "$300"
+    },
+    {
+        "nombre": "Hamburguesa Triple con Queso",
+        "imagen": "./image/hamburTripleQueso.png",
+        "precio": "$500"
+    },
+    {
+        "nombre": "BigMac",
+        "imagen": "./image/hamburBigMac.png",
+        "precio": "$500"
+    },
+    {
+        "nombre": "Triple Mac",
+        "imagen": "./image/hamburTripleQueso.png",
+        "precio": "$700"
+    },
+    {
+        "nombre": "Cuarto de Libra con Queso",
+        "imagen": "./image/cuartoLibraConQueso.png",
+        "precio": "$850"
+    },
+    {
+        "nombre": "Doble Cuarto de Libra con Queso",
+        "imagen": "./image/dobleCuartoDeLibra.png",
+        "precio": "$650"
+    },
+    {
+        "nombre": "Hamburguesa (Cajita Feliz)",
+        "imagen": "./image/hamburCajitaFeliz.png",
+        "precio": "$100"
+    },
+    {
+        "nombre": "McFiesta Jr. (Cajita Feliz)",
+        "imagen": "./image/hambur2CajitaFeliz.png",
+        "precio": "$200"
+    },
+    {
+        "nombre": "Doble BBQ con Queso",
+        "imagen": "./image/dobleBBQ.png",
+        "precio": "$750"
+    }
+]
