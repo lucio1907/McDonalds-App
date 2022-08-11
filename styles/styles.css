@@ -205,8 +205,8 @@ footer img{
 }
 
 .posicion-carrito{
-    width: 220px;
-    height: 400px;
+    width: 300px;
+    height: 0px;
     background: transparent;
     position: absolute;
     right: 0; 
@@ -223,7 +223,7 @@ footer img{
 
 .contenedorcompra{
     width: 100%;
-    background: #ffd700;
+    background: whitesmoke;
     height: 0px;
 }
 
@@ -248,10 +248,25 @@ footer img{
     text-align: center;
     align-items: center;
     font-size: 13px;
+    font-family: 'Cutive Mono', monospace;
 }
 
 .imagen-carrito{
     width: 40px;
+}
+
+.cantidad{
+    width: 15%;
+}
+
+.nombre-producto{
+    font-size: 13px;
+    width: 30%;
+}
+
+.precio-producto{
+    font-size: 15px;
+    width: 30%;
 }
 
 .contenedor-total{
