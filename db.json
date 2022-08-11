@@ -1,0 +1,170 @@
+[
+    [
+        {
+            "id": 1,
+            "nombre": "Hamburguesa con Queso",
+            "imagen": "./image/burgers/hamburQuesoSimple.png",
+            "precio": "$300"
+        },
+        {
+            "id": 2,
+            "nombre": "Hamburguesa Triple con Queso",
+            "imagen": "./image/burgers/hamburTripleQueso.png",
+            "precio": "$500"
+        },
+        {
+            "id": 3,
+            "nombre": "BigMac",
+            "imagen": "./image/burgers/hamburBigMac.png",
+            "precio": "$500"
+        },
+        {
+            "id": 4,
+            "nombre": "Triple Mac",
+            "imagen": "./image/burgers/hamburTripleQueso.png",
+            "precio": "$700"
+        },
+        {
+            "id": 5,
+            "nombre": "Cuarto de Libra con Queso",
+            "imagen": "./image/burgers/cuartoLibraConQueso.png",
+            "precio": "$850"
+        },
+        {
+            "id": 6,
+            "nombre": "Doble Cuarto de Libra con Queso",
+            "imagen": "./image/burgers/dobleCuartoDeLibra.png",
+            "precio": "$650"
+        },
+        {
+            "id": 7,
+            "nombre": "Hamburguesa (Cajita Feliz)",
+            "imagen": "./image/burgers/hamburCajitaFeliz.png",
+            "precio": "$100"
+        },
+        {
+            "id": 8,
+            "nombre": "McFiesta Jr. (Cajita Feliz)",
+            "imagen": "./image/burgers/hambur2CajitaFeliz.png",
+            "precio": "$200"
+        },
+        {
+            "id": 9,
+            "nombre": "Doble BBQ con Queso",
+            "imagen": "./image/burgers/dobleBBQ.png",
+            "precio": "$750"
+        }
+    ],
+    [
+        {
+            "id": 1,
+            "nombre": "Agua sin gas (500ml)",
+            "imagen": "./image/drinks/aguaKin.png",
+            "precio": "$100"
+        },
+        {
+            "id": 2,
+            "nombre": "Coca Cola Chica",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$120"
+        },
+        {
+            "id": 3,
+            "nombre": "Coca Cola Mediana",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$100"
+        },
+        {
+            "id": 4,
+            "nombre": "Coca Cola Grande",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$100"
+        },
+        {
+            "id": 5,
+            "nombre": "Coca Cola Light",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$100"
+        },
+        {
+            "id": 6,
+            "nombre": "Coca Cola Zero",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$100"
+        },
+        {
+            "id": 7,
+            "nombre": "Fanta",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$100"
+        },
+        {
+            "id": 8,
+            "nombre": "Sprite",
+            "imagen": "./image/drinks/cocaChica.png",
+            "precio": "$100"
+        },
+        {
+            "id": 9,
+            "nombre": "Jugo de Manzana",
+            "imagen": "./image/drinks/jugoDeManzana.png",
+            "precio": "$100"
+        }
+    ],
+    [
+        {
+            "id": 1,
+            "nombre": "Cono de Vainilla",
+            "imagen": "./image/postres/ConoNormal.png",
+            "precio": "$200"
+        },
+        {
+            "id": 2,
+            "nombre": "Cono Combinado",
+            "imagen": "./image/postres/ConoMixto.png",
+            "precio": "$200"
+        },
+        {
+            "id": 3,
+            "nombre": "Cono de Dulce de Leche",
+            "imagen": "./image/postres/ConoDDL.png",
+            "precio": "$200"
+        },
+        {
+            "id": 4,
+            "nombre": "Sundae de Dulce de Leche",
+            "imagen": "./image/postres/SundaeNormal.png",
+            "precio": "$200"
+        },
+        {
+            "id": 5,
+            "nombre": "Sundae de Chocolate",
+            "imagen": "./image/postres/SundaeChocolate.png",
+            "precio": "$200"
+        },
+        {
+            "id": 6,
+            "nombre": "Sundae de Frutilla",
+            "imagen": "./image/postres/SundaeFrutilla.png",
+            "precio": "$200"
+        },
+        {
+            "id": 7,
+            "nombre": "McFlurry Oreo",
+            "imagen": "./image/postres/McFlurryOreo.png",
+            "precio": "$200"
+        },
+        {
+            "id": 8,
+            "nombre": "McFlurry Kit Kat",
+            "imagen": "./image/postres/McFlurryKitKat.png",
+            "precio": "$200"
+        },
+        {
+            "id": 9,
+            "nombre": "Mc Flurry Crocantella",
+            "imagen": "./image/postres/McFlurryCrocantella.png",
+            "precio": "$200"
+        }
+    ]
+]
