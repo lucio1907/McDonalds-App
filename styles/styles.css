@@ -75,3 +75,26 @@ footer img{
     margin: 0 10px;
     margin-bottom: 40px;
 }
+
+.posicion-carrito{
+    width: 220px;
+    height: 400px;
+    background: transparent;
+    position: absolute;
+    right: 0; 
+}
+
+
+.queso-carrito{
+    width: 100%;
+    transform: rotate(180deg);
+    position: absolute;
+    z-index: 2;
+}
+
+
+.contenedorcompra{
+    width: 100%;
+    background: #ffd700;
+    height: 0px;
+}
