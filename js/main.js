@@ -21,7 +21,7 @@ function imprimirDataHamburguesa(data) {
       divContenedorHamburguesa.innerHTML = `
         <p id="nombre">${info.nombre}</p>
             <img id="producto-img" src="${info.imagen}" width="130px" height="130px" alt="${info.nombre}">
-        <p id="precio">Precio: ${info.precio} x Ud.</p>
+        <p id="precio">${info.precio}</p>
         <button id="boton">Agregar</button>
     `;
 

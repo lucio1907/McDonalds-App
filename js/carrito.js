@@ -75,7 +75,7 @@ $(document).ready(() => {
     }
   });
 
-  document.querySelector("#producto").addEventListener("click", (e) => {
+  document.querySelector("#section").addEventListener("click", (e) => {
     if (e.target.id === "boton") {
       e.preventDefault();
       crearProducto(e.target.parentElement);
@@ -91,6 +91,7 @@ $(document).ready(() => {
       precio: $(e).children("#precio").text().slice(1),
       cantidad: 1,
     };
+    console.log(producto);
     if (carrito.hasOwnProperty(producto.id)) {
       let precio = producto.precio;
       producto.cantidad = carrito[producto.id].cantidad + 1;
