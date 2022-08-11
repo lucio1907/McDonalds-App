@@ -238,3 +238,26 @@ footer img{
     flex-direction: row;
     align-items: center;
 }
+
+.contenedor-producto-carrito{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.imagen-carrito{
+    width: 40px;
+}
+
+.contenedor-total{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
