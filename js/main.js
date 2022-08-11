@@ -16,12 +16,13 @@ function imprimirDataHamburguesa(data) {
   if (btnHamburguesa) {
     data.map((info) => {
       const divContenedorHamburguesa = document.createElement("div");
+      divContenedorHamburguesa.setAttribute('class', 'contenedor-producto')
       divContenedorHamburguesa.setAttribute("id", "producto");
       divContenedorHamburguesa.setAttribute("data-index", info.id);
       divContenedorHamburguesa.innerHTML = `
-        <p id="nombre">${info.nombre}</p>
-            <img id="producto-img" src="${info.imagen}" width="130px" height="130px" alt="${info.nombre}">
-        <p id="precio">$${info.precio}</p>
+        <p class="sizeParrafo posicion-parrafo" id="nombre">${info.nombre}</p>
+            <img id="producto-img" class="size-img" src="${info.imagen}" alt="${info.nombre}">
+        <p class="sizeParrafo" id="precio">$${info.precio}</p>
         <button class="boton-agregar" id="boton">Agregar</button>
     `;
 
@@ -35,12 +36,13 @@ function imprimirDataBebida(data) {
   if (btnBebida) {
     data.map((info) => {
       const divContenedorBebidas = document.createElement("div");
+      divContenedorBebidas.setAttribute('class', 'contenedor-producto')
       divContenedorBebidas.setAttribute("id", "producto");
       divContenedorBebidas.setAttribute("data-index", info.id);
       divContenedorBebidas.innerHTML = `
-                <p id="nombre">${info.nombre}</p>
-                <img id="producto-img" src="${info.imagen}" width="130px" height="100px" alt="${info.nombre}">
-                <p id="precio">$${info.precio}</p>
+                <p class="sizeParrafo" id="nombre">${info.nombre}</p>
+                <img class="sizeBebida" id="producto-img" src="${info.imagen}" alt="${info.nombre}">
+                <p class="sizeParrafo" id="precio">$${info.precio}</p>
                 <button class="boton-agregar" id="boton">Agregar</button>
             `;
 
@@ -54,12 +56,13 @@ function imprimirDataPostres(data) {
   if (btnPostres) {
     data.map((info) => {
       const divContenedorPostres = document.createElement("div");
+      divContenedorPostres.setAttribute('class', 'contenedor-producto')
       divContenedorPostres.setAttribute("id", "producto");
       divContenedorPostres.setAttribute("data-index", info.id);
       divContenedorPostres.innerHTML = `
-                  <p id="nombre">${info.nombre}</p>
-                  <img id="producto-img" src="${info.imagen}" width="130px" height="130px" alt="${info.nombre}">
-                  <p id="precio">$${info.precio}</p>
+                  <p class="sizeParrafo" id="nombre">${info.nombre}</p>
+                  <img id="producto-img" class="size-img" src="${info.imagen}" alt="${info.nombre}">
+                  <p class="sizeParrafo" id="precio">$${info.precio}</p>
                   <button class="boton-agregar" id="boton">Agregar</button>
               `;
 

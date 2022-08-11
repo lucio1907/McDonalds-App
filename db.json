@@ -14,13 +14,13 @@
         },
         {
             "id": 3,
-            "nombre": "BigMac",
+            "nombre": "Hamburguesa BigMac",
             "imagen": "./image/burgers/hamburBigMac.png",
             "precio": 500
         },
         {
             "id": 4,
-            "nombre": "Triple Mac",
+            "nombre": "Hamburguesa Triple Mac",
             "imagen": "./image/burgers/hamburTripleQueso.png",
             "precio": 700
         },
@@ -44,7 +44,7 @@
         },
         {
             "id": 8,
-            "nombre": "McFiesta Jr. (Cajita Feliz)",
+            "nombre": "Hamburguesa McFiesta Jr. (Cajita Feliz)",
             "imagen": "./image/burgers/hambur2CajitaFeliz.png",
             "precio": 200
         },
