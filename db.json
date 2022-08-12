@@ -4,167 +4,167 @@
             "id": 1,
             "nombre": "Hamburguesa con Queso",
             "imagen": "./image/burgers/hamburQuesoSimple.png",
-            "precio": "$300"
+            "precio": 300
         },
         {
             "id": 2,
             "nombre": "Hamburguesa Triple con Queso",
             "imagen": "./image/burgers/hamburTripleQueso.png",
-            "precio": "$500"
+            "precio": 500
         },
         {
             "id": 3,
-            "nombre": "BigMac",
+            "nombre": "Hamburguesa BigMac",
             "imagen": "./image/burgers/hamburBigMac.png",
-            "precio": "$500"
+            "precio": 500
         },
         {
             "id": 4,
-            "nombre": "Triple Mac",
+            "nombre": "Hamburguesa Triple Mac",
             "imagen": "./image/burgers/hamburTripleQueso.png",
-            "precio": "$700"
+            "precio": 700
         },
         {
             "id": 5,
             "nombre": "Cuarto de Libra con Queso",
             "imagen": "./image/burgers/cuartoLibraConQueso.png",
-            "precio": "$850"
+            "precio": 850
         },
         {
             "id": 6,
             "nombre": "Doble Cuarto de Libra con Queso",
             "imagen": "./image/burgers/dobleCuartoDeLibra.png",
-            "precio": "$650"
+            "precio": 650
         },
         {
             "id": 7,
             "nombre": "Hamburguesa (Cajita Feliz)",
             "imagen": "./image/burgers/hamburCajitaFeliz.png",
-            "precio": "$100"
+            "precio": 100
         },
         {
             "id": 8,
-            "nombre": "McFiesta Jr. (Cajita Feliz)",
+            "nombre": "Hamburguesa McFiesta Jr. (Cajita Feliz)",
             "imagen": "./image/burgers/hambur2CajitaFeliz.png",
-            "precio": "$200"
+            "precio": 200
         },
         {
             "id": 9,
             "nombre": "Doble BBQ con Queso",
             "imagen": "./image/burgers/dobleBBQ.png",
-            "precio": "$750"
+            "precio": 750
         }
     ],
     [
         {
-            "id": 1,
+            "id": 10,
             "nombre": "Agua sin gas (500ml)",
             "imagen": "./image/drinks/aguaKin.png",
-            "precio": "$100"
+            "precio": 100
         },
         {
-            "id": 2,
+            "id": 11,
             "nombre": "Coca Cola Chica",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$120"
+            "precio": 120
         },
         {
-            "id": 3,
+            "id": 12,
             "nombre": "Coca Cola Mediana",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$100"
+            "precio": 150
         },
         {
-            "id": 4,
+            "id": 13,
             "nombre": "Coca Cola Grande",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$100"
+            "precio": 200
         },
         {
-            "id": 5,
+            "id": 14,
             "nombre": "Coca Cola Light",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$100"
+            "precio": 100
         },
         {
-            "id": 6,
+            "id": 15,
             "nombre": "Coca Cola Zero",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$100"
+            "precio": 120
         },
         {
-            "id": 7,
+            "id": 16,
             "nombre": "Fanta",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$100"
+            "precio": 120
         },
         {
-            "id": 8,
+            "id": 17,
             "nombre": "Sprite",
             "imagen": "./image/drinks/cocaChica.png",
-            "precio": "$100"
+            "precio": 120
         },
         {
-            "id": 9,
+            "id": 18,
             "nombre": "Jugo de Manzana",
             "imagen": "./image/drinks/jugoDeManzana.png",
-            "precio": "$100"
+            "precio": 120
         }
     ],
     [
         {
-            "id": 1,
+            "id": 20,
             "nombre": "Cono de Vainilla",
             "imagen": "./image/postres/ConoNormal.png",
-            "precio": "$200"
+            "precio": 200
         },
         {
-            "id": 2,
+            "id": 21,
             "nombre": "Cono Combinado",
             "imagen": "./image/postres/ConoMixto.png",
-            "precio": "$200"
+            "precio": 230
         },
         {
-            "id": 3,
+            "id": 22,
             "nombre": "Cono de Dulce de Leche",
             "imagen": "./image/postres/ConoDDL.png",
-            "precio": "$200"
+            "precio": 230
         },
         {
-            "id": 4,
+            "id": 23,
             "nombre": "Sundae de Dulce de Leche",
             "imagen": "./image/postres/SundaeNormal.png",
-            "precio": "$200"
+            "precio": 300
         },
         {
-            "id": 5,
+            "id": 24,
             "nombre": "Sundae de Chocolate",
             "imagen": "./image/postres/SundaeChocolate.png",
-            "precio": "$200"
+            "precio": 300
         },
         {
-            "id": 6,
+            "id": 25,
             "nombre": "Sundae de Frutilla",
             "imagen": "./image/postres/SundaeFrutilla.png",
-            "precio": "$200"
+            "precio": 300
         },
         {
-            "id": 7,
+            "id": 26,
             "nombre": "McFlurry Oreo",
             "imagen": "./image/postres/McFlurryOreo.png",
-            "precio": "$200"
+            "precio": 500
         },
         {
-            "id": 8,
+            "id": 27,
             "nombre": "McFlurry Kit Kat",
             "imagen": "./image/postres/McFlurryKitKat.png",
-            "precio": "$200"
+            "precio": 500
         },
         {
-            "id": 9,
+            "id": 28,
             "nombre": "Mc Flurry Crocantella",
             "imagen": "./image/postres/McFlurryCrocantella.png",
-            "precio": "$200"
+            "precio": 500
         }
     ]
 ]
