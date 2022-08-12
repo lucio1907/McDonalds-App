@@ -7,22 +7,35 @@ const btnPostres = document.querySelector("#postres");
 
 document.addEventListener("DOMContentLoaded", () => {
   consultarAPIHamburguesa();
-  btnHamburguesa.addEventListener("click", consultarAPIHamburguesa);
-  btnBebida.addEventListener("click", consultarAPIBebida);
-  btnPostres.addEventListener("click", consultarAPIPostres);
+  btnHamburguesa.addEventListener("click", () => {
+    setTimeout(() => {
+      consultarAPIHamburguesa();
+    }, 200);
+  });
+  btnBebida.addEventListener("click", () => {
+    setTimeout(() => {
+      consultarAPIBebida();
+    }, 200);
+  });
+  btnPostres.addEventListener("click", () => {
+    setTimeout(() => {
+      consultarAPIPostres();
+    }, 200);
+  });
 });
 
 function imprimirDataHamburguesa(data) {
   if (btnHamburguesa) {
     data.map((info) => {
+      const {id, nombre, imagen, precio} = info;
       const divContenedorHamburguesa = document.createElement("div");
       divContenedorHamburguesa.setAttribute('class', 'contenedor-producto')
       divContenedorHamburguesa.setAttribute("id", "producto");
-      divContenedorHamburguesa.setAttribute("data-index", info.id);
+      divContenedorHamburguesa.setAttribute("data-index", id);
       divContenedorHamburguesa.innerHTML = `
-        <p class="sizeParrafo posicion-parrafo" id="nombre">${info.nombre}</p>
-            <img id="producto-img" class="size-img" src="${info.imagen}" alt="${info.nombre}">
-        <p class="sizeParrafo" id="precio">$${info.precio}</p>
+        <p class="sizeParrafo posicion-parrafo" id="nombre">${nombre}</p>
+            <img id="producto-img" class="size-img" src="${imagen}" alt="${nombre}">
+        <p class="sizeParrafo" id="precio">$${precio}</p>
         <button class="boton-agregar" id="boton">Agregar</button>
     `;
 
@@ -35,14 +48,15 @@ function imprimirDataHamburguesa(data) {
 function imprimirDataBebida(data) {
   if (btnBebida) {
     data.map((info) => {
+      const {id, nombre, imagen, precio} = info;
       const divContenedorBebidas = document.createElement("div");
       divContenedorBebidas.setAttribute('class', 'contenedor-producto')
       divContenedorBebidas.setAttribute("id", "producto");
-      divContenedorBebidas.setAttribute("data-index", info.id);
+      divContenedorBebidas.setAttribute("data-index", id);
       divContenedorBebidas.innerHTML = `
-                <p class="sizeParrafo" id="nombre">${info.nombre}</p>
-                <img class="sizeBebida" id="producto-img" src="${info.imagen}" alt="${info.nombre}">
-                <p class="sizeParrafo" id="precio">$${info.precio}</p>
+                <p class="sizeParrafo" id="nombre">${nombre}</p>
+                <img class="sizeBebida" id="producto-img" src="${imagen}" alt="${nombre}">
+                <p class="sizeParrafo" id="precio">$${precio}</p>
                 <button class="boton-agregar" id="boton">Agregar</button>
             `;
 
@@ -55,14 +69,15 @@ function imprimirDataBebida(data) {
 function imprimirDataPostres(data) {
   if (btnPostres) {
     data.map((info) => {
+      const {id, nombre, imagen, precio} = info;
       const divContenedorPostres = document.createElement("div");
       divContenedorPostres.setAttribute('class', 'contenedor-producto')
       divContenedorPostres.setAttribute("id", "producto");
-      divContenedorPostres.setAttribute("data-index", info.id);
+      divContenedorPostres.setAttribute("data-index", id);
       divContenedorPostres.innerHTML = `
-                  <p class="sizeParrafo" id="nombre">${info.nombre}</p>
-                  <img id="producto-img" class="size-img" src="${info.imagen}" alt="${info.nombre}">
-                  <p class="sizeParrafo" id="precio">$${info.precio}</p>
+                  <p class="sizeParrafo" id="nombre">${nombre}</p>
+                  <img id="producto-img" class="size-img" src="${imagen}" alt="${nombre}">
+                  <p class="sizeParrafo" id="precio">$${precio}</p>
                   <button class="boton-agregar" id="boton">Agregar</button>
               `;
 
@@ -80,7 +95,12 @@ async function consultarAPIHamburguesa() {
     const respuesta = await fetch(url);
     const data = await respuesta.json();
 
-    imprimirDataHamburguesa(data[0]);
+    if (btnHamburguesa) {
+      spinner();
+      setTimeout(() => {
+        imprimirDataHamburguesa(data[0]);
+      }, 1200);
+    }
   } catch (error) {
     console.log(error);
   }
@@ -94,7 +114,12 @@ async function consultarAPIBebida() {
     const respuesta = await fetch(url);
     const data = await respuesta.json();
 
-    imprimirDataBebida(data[1]);
+    if (btnBebida) {
+      spinner();
+      setTimeout(() => {
+        imprimirDataBebida(data[1]);
+      }, 1200);
+    }
   } catch (error) {
     console.log(error);
   }
@@ -108,10 +133,33 @@ async function consultarAPIPostres() {
     const respuesta = await fetch(url);
     const data = await respuesta.json();
 
-    imprimirDataBebida(data[2]);
+    if (btnPostres) {
+      spinner();
+      setTimeout(() => {
+        imprimirDataBebida(data[2]);
+      }, 1200);
+    }
   } catch (error) {
     console.log(error);
   }
+}
+
+function spinner() {
+  const divSpinner = document.createElement('div');
+  divSpinner.innerHTML = `
+    <img class="spinner" src="./image/logo.png" alt="spinner-logo-mcDonalds">
+  `
+
+  section.appendChild(divSpinner)
+
+  if (divSpinner) {
+    section.style.height = '80vh'
+  }
+
+  setTimeout(() => {
+    divSpinner.remove()
+    section.style.height = '100%'
+  }, 1200);
 }
 
 function limpiarHTML() {
