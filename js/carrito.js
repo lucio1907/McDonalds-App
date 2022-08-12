@@ -129,6 +129,7 @@ $(document).ready(() => {
       distancia -= 80;
     }
     carrito[producto.id] = { ...producto };
+    mensajeAgregarCarrito('Agregando al carrito...');
   }
 
   function mostrarEnCarrito() {
@@ -149,3 +150,19 @@ $(document).ready(() => {
     contenedorpicado.appendChild(contenedortotal);
   }
 });
+
+function mensajeAgregarCarrito(mensaje) {
+    const contenedorMensajeCarrito = document.querySelector('#mensajeCarrito');
+    const divMensaje = document.createElement('div');
+    const pTexto = document.createElement('p');
+    divMensaje.classList.add('mensaje-carrito');
+    pTexto.classList.add('texto-animado');
+    pTexto.textContent = mensaje;
+
+    divMensaje.appendChild(pTexto);
+    contenedorMensajeCarrito.appendChild(divMensaje);
+
+    setTimeout(() => {
+      divMensaje.remove();
+    }, 1300);
+}

@@ -1,4 +1,5 @@
 const section = document.querySelector("#section");
+const footer = document.querySelector('#footer')
 
 // Variables botones
 const btnHamburguesa = document.querySelector("#hamburguesas");
@@ -136,7 +137,7 @@ async function consultarAPIPostres() {
     if (btnPostres) {
       spinner();
       setTimeout(() => {
-        imprimirDataBebida(data[2]);
+        imprimirDataPostres(data[2]);
       }, 1200);
     }
   } catch (error) {
@@ -154,11 +155,13 @@ function spinner() {
 
   if (divSpinner) {
     section.style.height = '80vh'
+    footer.style.display = 'none'
   }
 
   setTimeout(() => {
     divSpinner.remove()
     section.style.height = '100%'
+    footer.style.display = 'flex'
   }, 1200);
 }
 
