@@ -89,7 +89,7 @@ header{
     background: white;
     border-bottom: 2px solid black;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     padding: 10px 0px;
@@ -114,6 +114,23 @@ header{
     font-weight: 600;
     text-decoration: none;
     font-size: 13px;
+
+    transition: all .3s ease-in-out;
+}
+
+.seccion:hover {
+    letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+    .seccion {
+        width: 15%;
+        text-align: center;
+    }
+
+    .seccion:hover {
+        letter-spacing: 7px;   
+    }
 }
 
 .grid-section {
@@ -303,4 +320,29 @@ footer img{
 
 .contenedor-producto {
     padding: 20px;
+}
+
+.spinner {
+    width: 90px;
+    padding: 20px;
+    animation: spinnerLoad 1.2s infinite ease-in-out;
+
+    position: relative;
+    top: 35vh;
+}
+
+@keyframes spinnerLoad {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+@media (min-width: 768px) {
+    .spinner {
+        left: 31vw;
+    }
 }
