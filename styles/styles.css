@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-body{
-    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
@@ -17,16 +17,17 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
 }
 
-header{
+header {
     width: 100%;
     background-color: #db0007;
-    box-shadow:  10px 10px 20px black,
-    -20px -20px 60px #ffffff;
+    box-shadow: 10px 10px 20px black,
+        -20px -20px 60px #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
+
+.logo {
     width: 80px;
     padding: 10px;
 }
@@ -40,11 +41,12 @@ header{
     }
 }
 
-.logo-img{
+.logo-img {
     width: 110px;
     vertical-align: top;
 }
-.carrito{
+
+.carrito {
     width: 60px;
     height: 40px;
     cursor: pointer;
@@ -59,11 +61,11 @@ header{
     }
 }
 
-.carrito-img{
+.carrito-img {
     width: 100%;
 }
 
-.contenedor-productos{
+.contenedor-productos {
     width: 300px;
     height: 80vh;
     border: 3px solid #ffbc0d;
@@ -83,7 +85,7 @@ header{
     }
 }
 
-.buscador{
+.buscador {
     width: 100%;
     height: 30px;
     background: white;
@@ -104,12 +106,12 @@ header{
 
 @media (min-width: 1100px) {
     .buscador {
-        
+
         letter-spacing: 3px;
     }
 }
 
-.seccion{
+.seccion {
     color: black;
     font-weight: 600;
     text-decoration: none;
@@ -129,7 +131,7 @@ header{
     }
 
     .seccion:hover {
-        letter-spacing: 7px;   
+        letter-spacing: 7px;
     }
 }
 
@@ -147,7 +149,7 @@ header{
     }
 }
 
-.queso{
+.queso {
     transform: rotate(180deg);
     margin-top: 20px;
     position: absolute;
@@ -165,13 +167,13 @@ header{
     .queso {
         bottom: 20%;
     }
-    
+
     .queso2 {
         bottom: 20%;
     }
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,21 +184,21 @@ footer{
     background: #db0007;
 }
 
-footer img{
+footer img {
     width: 30px;
     margin: 0 10px;
 }
 
-.posicion-carrito{
+.posicion-carrito {
     width: 300px;
     height: 0px;
     background: transparent;
     position: absolute;
-    right: 0; 
+    right: 0;
 }
 
 
-.queso-carrito{
+.queso-carrito {
     width: 100%;
     transform: rotate(180deg);
     position: absolute;
@@ -204,7 +206,7 @@ footer img{
 }
 
 
-.contenedorcompra{
+.contenedorcompra {
     width: 100%;
     background: whitesmoke;
     height: 0px;
@@ -225,10 +227,10 @@ footer img{
 }
 
 .div-footer i {
-    color: #fff;    
+    color: #fff;
 }
 
-.contenedor-producto-carrito{
+.contenedor-producto-carrito {
     width: 100%;
     height: 80px;
     background-color: white;
@@ -240,25 +242,25 @@ footer img{
     font-family: 'Cutive Mono', monospace;
 }
 
-.imagen-carrito{
+.imagen-carrito {
     width: 40px;
 }
 
-.cantidad{
+.cantidad {
     width: 15%;
 }
 
-.nombre-producto{
+.nombre-producto {
     font-size: 13px;
     width: 30%;
 }
 
-.precio-producto{
+.precio-producto {
     font-size: 15px;
     width: 30%;
 }
 
-.contenedor-total{
+.contenedor-total {
     width: 100%;
     background-color: black;
     color: white;
@@ -336,6 +338,7 @@ footer img{
     from {
         transform: rotate(360deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
@@ -361,6 +364,7 @@ footer img{
     border: 1px solid #ffbc0d;
     border-radius: 7px;
     box-shadow: 6px 6px 0 0px #000;
+    text-align: center;
 }
 
 .texto-animado {
@@ -370,13 +374,15 @@ footer img{
 }
 
 @keyframes spin {
-    0%{
+    0% {
         opacity: 1;
     }
-    50%{
+
+    50% {
         opacity: .5;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }

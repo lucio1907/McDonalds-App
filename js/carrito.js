@@ -6,9 +6,9 @@ $(document).ready(() => {
   contenedorpicado.classList.add("contenedorcompra");
   document.querySelector(".posicion-carrito").appendChild(contenedorpicado);
   document.querySelector("#carrito").addEventListener("click", () => {
-    const error=document.querySelector('.verificar') 
-    if(!error){
-      contenedorpicado.classList.add('verificar')
+    const error = document.querySelector(".verificar");
+    if (!error) {
+      contenedorpicado.classList.add("verificar");
       setTimeout(() => {
         if (estadocarrito === false) {
           $(contenedorpicado).css({
@@ -34,8 +34,8 @@ $(document).ready(() => {
           );
         }
       }, 0);
-    }else {
-      contenedorpicado.classList.remove('verificar')
+    } else {
+      contenedorpicado.classList.remove("verificar");
       $("#queso-carrito").animate(
         {
           marginTop: "0px",
@@ -57,8 +57,8 @@ $(document).ready(() => {
     }
   });
 
-  document.querySelector('body').addEventListener('click',(e)=>{
-    if(e.target.id!='boton'&&e.target.className!='carrito-img'){
+  document.querySelector("body").addEventListener("click", (e) => {
+    if (e.target.id != "boton" && e.target.className != "carrito-img") {
       $("#queso-carrito").animate(
         {
           marginTop: "0px",
@@ -77,22 +77,23 @@ $(document).ready(() => {
           estadocarrito = false;
         }
       );
-      contenedorpicado.classList.remove('verificar')
+      contenedorpicado.classList.remove("verificar");
     }
-
-  })
+  });
 
   document.querySelector("#section").addEventListener("click", (e) => {
     if (e.target.id === "boton") {
       e.preventDefault();
       crearProducto(e.target.parentElement);
       distancia += 80;
-      if(estadocarrito===true){
-        const contenedorTotal=document.querySelector('.contenedor-total')
-        contenedorTotal.remove()
-        const contenedorPadre=document.querySelectorAll('.contenedor-producto-carrito')
-        for(let contenedor of contenedorPadre){
-          contenedor.remove()
+      if (estadocarrito === true) {
+        const contenedorTotal = document.querySelector(".contenedor-total");
+        contenedorTotal.remove();
+        const contenedorPadre = document.querySelectorAll(
+          ".contenedor-producto-carrito"
+        );
+        for (let contenedor of contenedorPadre) {
+          contenedor.remove();
         }
         $("#queso-carrito").animate(
           {
@@ -107,7 +108,7 @@ $(document).ready(() => {
           1300,
           () => {
             estadocarrito = true;
-            mostrarEnCarrito()
+            mostrarEnCarrito();
           }
         );
       }
@@ -129,15 +130,15 @@ $(document).ready(() => {
       distancia -= 80;
     }
     carrito[producto.id] = { ...producto };
-    mensajeAgregarCarrito('Agregando al carrito...');
+    mensajeAgregarCarrito("Agregando al carrito...");
   }
 
   function mostrarEnCarrito() {
     let total = 0;
     for (let producto in carrito) {
       let contenedorproducto = document.createElement("div");
-      const {imagen,cantidad,nombre,precio}=carrito[producto]
-      console.log(imagen,cantidad,nombre,precio)
+      const { imagen, cantidad, nombre, precio } = carrito[producto];
+      console.log(imagen, cantidad, nombre, precio);
       contenedorproducto.classList.add("contenedor-producto-carrito");
       contenedorproducto.innerHTML = `<img class="imagen-carrito" src="${imagen}">
                                         <p class="cantidad">Cant ${cantidad}</p>
@@ -154,17 +155,17 @@ $(document).ready(() => {
 });
 
 function mensajeAgregarCarrito(mensaje) {
-    const contenedorMensajeCarrito = document.querySelector('#mensajeCarrito');
-    const divMensaje = document.createElement('div');
-    const pTexto = document.createElement('p');
-    divMensaje.classList.add('mensaje-carrito');
-    pTexto.classList.add('texto-animado');
-    pTexto.textContent = mensaje;
+  const contenedorMensajeCarrito = document.querySelector("#mensajeCarrito");
+  const divMensaje = document.createElement("div");
+  const pTexto = document.createElement("p");
+  divMensaje.classList.add("mensaje-carrito");
+  pTexto.classList.add("texto-animado");
+  pTexto.textContent = mensaje;
 
-    divMensaje.appendChild(pTexto);
-    contenedorMensajeCarrito.appendChild(divMensaje);
+  divMensaje.appendChild(pTexto);
+  contenedorMensajeCarrito.appendChild(divMensaje);
 
-    setTimeout(() => {
-      divMensaje.remove();
-    }, 1300);
+  setTimeout(() => {
+    divMensaje.remove();
+  }, 1300);
 }

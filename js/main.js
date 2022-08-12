@@ -1,5 +1,5 @@
 const section = document.querySelector("#section");
-const footer = document.querySelector('#footer')
+const footer = document.querySelector("#footer");
 
 // Variables botones
 const btnHamburguesa = document.querySelector("#hamburguesas");
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function imprimirDataHamburguesa(data) {
   if (btnHamburguesa) {
     data.map((info) => {
-      const {id, nombre, imagen, precio} = info;
+      const { id, nombre, imagen, precio } = info;
       const divContenedorHamburguesa = document.createElement("div");
-      divContenedorHamburguesa.setAttribute('class', 'contenedor-producto')
-      divContenedorHamburguesa.classList.add('hamburgesa')
+      divContenedorHamburguesa.setAttribute("class", "contenedor-producto");
+      divContenedorHamburguesa.classList.add("hamburgesa");
       divContenedorHamburguesa.setAttribute("id", "producto");
       divContenedorHamburguesa.setAttribute("data-index", id);
       divContenedorHamburguesa.innerHTML = `
@@ -50,10 +50,10 @@ function imprimirDataHamburguesa(data) {
 function imprimirDataBebida(data) {
   if (btnBebida) {
     data.map((info) => {
-      const {id, nombre, imagen, precio} = info;
+      const { id, nombre, imagen, precio } = info;
       const divContenedorBebidas = document.createElement("div");
-      divContenedorBebidas.setAttribute('class', 'contenedor-producto')
-      divContenedorBebidas.classList.add('bebida')
+      divContenedorBebidas.setAttribute("class", "contenedor-producto");
+      divContenedorBebidas.classList.add("bebida");
       divContenedorBebidas.setAttribute("id", "producto");
       divContenedorBebidas.setAttribute("data-index", id);
       divContenedorBebidas.innerHTML = `
@@ -72,10 +72,10 @@ function imprimirDataBebida(data) {
 function imprimirDataPostres(data) {
   if (btnPostres) {
     data.map((info) => {
-      const {id, nombre, imagen, precio} = info;
+      const { id, nombre, imagen, precio } = info;
       const divContenedorPostres = document.createElement("div");
-      divContenedorPostres.setAttribute('class', 'contenedor-producto')
-      divContenedorPostres.classList.add('postres')
+      divContenedorPostres.setAttribute("class", "contenedor-producto");
+      divContenedorPostres.classList.add("postres");
       divContenedorPostres.setAttribute("id", "producto");
       divContenedorPostres.setAttribute("data-index", id);
       divContenedorPostres.innerHTML = `
@@ -149,22 +149,22 @@ async function consultarAPIPostres() {
 }
 
 function spinner() {
-  const divSpinner = document.createElement('div');
+  const divSpinner = document.createElement("div");
   divSpinner.innerHTML = `
     <img class="spinner" src="./image/logo.png" alt="spinner-logo-mcDonalds">
-  `
+  `;
 
-  section.appendChild(divSpinner)
+  section.appendChild(divSpinner);
 
   if (divSpinner) {
-    section.style.height = '80vh'
-    footer.style.display = 'none'
+    section.style.height = "80vh";
+    footer.style.display = "none";
   }
 
   setTimeout(() => {
-    divSpinner.remove()
-    section.style.height = '100%'
-    footer.style.display = 'flex'
+    divSpinner.remove();
+    section.style.height = "100%";
+    footer.style.display = "flex";
   }, 1200);
 }
 
@@ -174,33 +174,31 @@ function limpiarHTML() {
   }
 }
 
-
-let body=document.querySelector('body')
-  const hammerTime= new Hammer(body)
-  hammerTime.on('panright panleft',(e)=>{
-    let producto=document.querySelector('#producto').className
-    console.log(producto)
-    if(e.additionalEvent==='panleft'){
-      if(producto==='contenedor-producto hamburgesa'){
-        setTimeout(() => {
-          consultarAPIBebida()
-        }, 50);
-      }else if(producto==='contenedor-producto bebida'){
-        setTimeout(() => {
-          consultarAPIPostres()
-        }, 50);
-      }
+let body = document.querySelector("body");
+const hammerTime = new Hammer(body);
+hammerTime.on("panright panleft", (e) => {
+  let producto = document.querySelector("#producto").className;
+  console.log(producto);
+  if (e.additionalEvent === "panleft") {
+    if (producto === "contenedor-producto hamburgesa") {
+      setTimeout(() => {
+        consultarAPIBebida();
+      }, 100);
+    } else if (producto === "contenedor-producto bebida") {
+      setTimeout(() => {
+        consultarAPIPostres();
+      }, 100);
     }
-    if(e.additionalEvent==='panright'){
-      if(producto==='contenedor-producto postres'){
-        setTimeout(() => {
-          consultarAPIBebida()
-      }, 50);
-      }else if(producto==='contenedor-producto bebida'){
-        setTimeout(() => {
-          consultarAPIHamburguesa()
-        }, 50);
-      }
-      
+  }
+  if (e.additionalEvent === "panright") {
+    if (producto === "contenedor-producto postres") {
+      setTimeout(() => {
+        consultarAPIBebida();
+      }, 100);
+    } else if (producto === "contenedor-producto bebida") {
+      setTimeout(() => {
+        consultarAPIHamburguesa();
+      }, 100);
     }
-  })
+  }
+});
