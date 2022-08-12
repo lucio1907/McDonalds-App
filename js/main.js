@@ -1,4 +1,5 @@
 const section = document.querySelector("#section");
+const footer = document.querySelector('#footer')
 
 // Variables botones
 const btnHamburguesa = document.querySelector("#hamburguesas");
@@ -157,11 +158,13 @@ function spinner() {
 
   if (divSpinner) {
     section.style.height = '80vh'
+    footer.style.display = 'none'
   }
 
   setTimeout(() => {
     divSpinner.remove()
     section.style.height = '100%'
+    footer.style.display = 'flex'
   }, 1200);
 }
 

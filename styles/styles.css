@@ -219,7 +219,13 @@ footer img{
 .div-footer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.div-footer i {
+    color: #fff;    
 }
 
 .contenedor-producto-carrito{
@@ -272,6 +278,8 @@ footer img{
     text-transform: uppercase;
     font-weight: 600;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
+    border: 1px solid #000;
 
     transition: all .2s ease;
 }
@@ -302,15 +310,8 @@ footer img{
 }
 
 .size-img {
-    width: 100px;
-    height: 100px;
-}
-
-@media (min-width: 768px) {
-    .size-img {
-        width: 300px;
-        height: 225px;
-    }
+    width: 300px;
+    height: 225px;
 }
 
 .size-bebida {
@@ -344,5 +345,38 @@ footer img{
 @media (min-width: 768px) {
     .spinner {
         left: 31vw;
+    }
+}
+
+.mensaje-carrito {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    position: relative;
+    top: 14px;
+    margin: 20px auto;
+    background-color: #db0007;
+    border: 1px solid #ffbc0d;
+    border-radius: 7px;
+    box-shadow: 6px 6px 0 0px #000;
+}
+
+.texto-animado {
+    animation: spin 1s infinite ease-in-out;
+    color: #ffbc0d;
+    text-transform: uppercase;
+}
+
+@keyframes spin {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
     }
 }
