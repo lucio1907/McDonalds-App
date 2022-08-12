@@ -30,6 +30,7 @@ function imprimirDataHamburguesa(data) {
       const {id, nombre, imagen, precio} = info;
       const divContenedorHamburguesa = document.createElement("div");
       divContenedorHamburguesa.setAttribute('class', 'contenedor-producto')
+      divContenedorHamburguesa.classList.add('hamburgesa')
       divContenedorHamburguesa.setAttribute("id", "producto");
       divContenedorHamburguesa.setAttribute("data-index", id);
       divContenedorHamburguesa.innerHTML = `
@@ -51,6 +52,7 @@ function imprimirDataBebida(data) {
       const {id, nombre, imagen, precio} = info;
       const divContenedorBebidas = document.createElement("div");
       divContenedorBebidas.setAttribute('class', 'contenedor-producto')
+      divContenedorBebidas.classList.add('bebida')
       divContenedorBebidas.setAttribute("id", "producto");
       divContenedorBebidas.setAttribute("data-index", id);
       divContenedorBebidas.innerHTML = `
@@ -72,6 +74,7 @@ function imprimirDataPostres(data) {
       const {id, nombre, imagen, precio} = info;
       const divContenedorPostres = document.createElement("div");
       divContenedorPostres.setAttribute('class', 'contenedor-producto')
+      divContenedorPostres.classList.add('postres')
       divContenedorPostres.setAttribute("id", "producto");
       divContenedorPostres.setAttribute("data-index", id);
       divContenedorPostres.innerHTML = `
@@ -136,7 +139,7 @@ async function consultarAPIPostres() {
     if (btnPostres) {
       spinner();
       setTimeout(() => {
-        imprimirDataBebida(data[2]);
+        imprimirDataPostres(data[2]);
       }, 1200);
     }
   } catch (error) {
@@ -167,3 +170,34 @@ function limpiarHTML() {
     section.removeChild(section.firstChild);
   }
 }
+
+
+let body=document.querySelector('body')
+  const hammerTime= new Hammer(body)
+  hammerTime.on('panright panleft',(e)=>{
+    let producto=document.querySelector('#producto').className
+    console.log(producto)
+    if(e.additionalEvent==='panleft'){
+      if(producto==='contenedor-producto hamburgesa'){
+        setTimeout(() => {
+          consultarAPIBebida()
+        }, 50);
+      }else if(producto==='contenedor-producto bebida'){
+        setTimeout(() => {
+          consultarAPIPostres()
+        }, 50);
+      }
+    }
+    if(e.additionalEvent==='panright'){
+      if(producto==='contenedor-producto postres'){
+        setTimeout(() => {
+          consultarAPIBebida()
+      }, 50);
+      }else if(producto==='contenedor-producto bebida'){
+        setTimeout(() => {
+          consultarAPIHamburguesa()
+        }, 50);
+      }
+      
+    }
+  })

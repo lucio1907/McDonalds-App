@@ -135,11 +135,13 @@ $(document).ready(() => {
     let total = 0;
     for (let producto in carrito) {
       let contenedorproducto = document.createElement("div");
+      const {imagen,cantidad,nombre,precio}=carrito[producto]
+      console.log(imagen,cantidad,nombre,precio)
       contenedorproducto.classList.add("contenedor-producto-carrito");
-      contenedorproducto.innerHTML = `<img class="imagen-carrito" src="${carrito[producto].imagen}">
-                                        <p class="cantidad">Cant ${carrito[producto].cantidad}</p>
-                                        <h4 class="nombre-producto">${carrito[producto].nombre}</h4>
-                                        <h3 class="precio-producto">$${carrito[producto].precio}</h3>`;
+      contenedorproducto.innerHTML = `<img class="imagen-carrito" src="${imagen}">
+                                        <p class="cantidad">Cant ${cantidad}</p>
+                                        <h4 class="nombre-producto">${nombre}</h4>
+                                        <h3 class="precio-producto">$${precio}</h3>`;
       contenedorpicado.append(contenedorproducto);
       total += Number(carrito[producto].precio);
     }
